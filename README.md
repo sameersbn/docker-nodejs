@@ -45,7 +45,7 @@ For example, if `npm start` is executed, the following command is executed by th
 
 ```bash
 docker run -it --rm -p 3000:3000 \
-  -v $PWD:/home/nodejs/src sameersbn/nodejs npm start
+  -v $PWD:/home/nodejs/src sameersbn/nodejs:latest npm start
 ```
 
 # Upgrading
