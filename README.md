@@ -3,6 +3,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Limitations](#limitations)
+- [How it works](#how-it-works)
 - [Upgrading](#upgrading)
 - [Uninstallation](#uninstallation)
 
@@ -35,6 +36,17 @@ You can also use `nodemon bin/www` instead of `npm start`.
 # Limitations
 
 The only known limitation is that you cannot install node modules globally, that is to say `npm install -g <module-name>` will not work. These can only be installed from the `Dockerfile`. If you want to add node modules globally please send a PR.
+
+# How it works
+
+The wrapper scripts mount the current working directory and setup forwarding of port 3000 while starting the `sameersbn/nodejs` image. The command executed while starting the image is the same as the name of the wrapper script that was launched with whatever arguments were passed while running the wrapper script.
+
+For example, if `npm start` is executed, the following command is executed by the wrapper script:
+
+```bash
+docker run -it --rm -p 3000:3000 \
+  -v $PWD:/home/nodejs/src sameersbn/nodejs npm start
+```
 
 # Upgrading
 
