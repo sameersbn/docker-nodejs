@@ -13,4 +13,5 @@ RUN chmod 755 /start
 
 EXPOSE 3000
 VOLUME ["/home/nodejs/src"]
-CMD ["/start"]
+
+ENTRYPOINT ["/start"]

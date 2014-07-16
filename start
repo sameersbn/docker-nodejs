@@ -5,9 +5,4 @@ set -e
 chown -R nodejs:nodejs /home/nodejs/src
 
 cd /home/nodejs/src
-if [ -f package.json ]; then
-	echo "Installing dependencies..."
-	sudo -u nodejs -H npm install
-fi
-
-exec sudo -u nodejs -H npm start
+exec sudo -u nodejs -H npm $@
