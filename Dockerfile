@@ -8,6 +8,7 @@ RUN add-apt-repository -y ppa:chris-lea/node.js && \
 		npm install -g express-generator nodemon && \
 		apt-get clean # 20140715
 
+ADD scripts /scripts
 ADD start /start
 RUN chmod 755 /start
 
