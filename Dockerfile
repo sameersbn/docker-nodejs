@@ -1,8 +1,7 @@
 FROM sameersbn/ubuntu:12.04.20140628
 MAINTAINER sameer@damagehead.com
 
-RUN add-apt-repository -y ppa:chris-lea/node.js && \
-		apt-get update && \
+RUN wget -q https://deb.nodesource.com/setup -O - | bash - && \
 		apt-get install -y nodejs && \
 		adduser --disabled-login --gecos 'NodeJS' nodejs && \
 		npm install -g express-generator nodemon && \
