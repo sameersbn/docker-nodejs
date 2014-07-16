@@ -12,7 +12,6 @@ ADD scripts /scripts
 ADD start /start
 RUN chmod 755 /start
 
-EXPOSE 3000
 VOLUME ["/home/nodejs/src"]
 
 ENTRYPOINT ["/start"]
