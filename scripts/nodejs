@@ -1,4 +1,13 @@
 #!/bin/bash
 
-docker run -it --rm --net=host \
-  -v $PWD:/home/nodejs/src sameersbn/nodejs:latest $(basename $0) $@
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
+
+prog=$(basename $0)
+exec=$(which $prog)
+
+if [ -n "${exec}" ]; then
+  exec ${exec} $@
+else
+  docker run -it --rm --net=host \
+    -v $PWD:/home/nodejs/src sameersbn/nodejs:latest $(basename $0) $@
+fi
