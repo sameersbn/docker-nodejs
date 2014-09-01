@@ -1,7 +1,6 @@
 FROM sameersbn/ubuntu:14.04.20140818
 MAINTAINER sameer@damagehead.com
 
-RUN echo -n > /etc/apt/apt.conf.d/01proxy
 RUN wget -q https://deb.nodesource.com/setup -O - | bash - && \
     apt-get install -y nodejs && \
     adduser --disabled-login --gecos 'NodeJS' nodejs && \
