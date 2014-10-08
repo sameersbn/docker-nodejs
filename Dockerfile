@@ -1,9 +1,8 @@
-FROM sameersbn/debian:jessie.20141001
+FROM sameersbn/ubuntu:14.04.20141001
 MAINTAINER sameer@damagehead.com
 
 RUN apt-get update \
  && apt-get install -y nodejs npm \
- && ln -sf /usr/bin/nodejs /usr/bin/node \
  && adduser --disabled-login --gecos 'NodeJS' nodejs \
  && npm install -g express-generator nodemon \
  && rm -rf /var/lib/apt/lists/* # 20140918
