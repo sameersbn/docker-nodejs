@@ -1,5 +1,6 @@
 # Table of Contents
 - [Introduction](#introduction)
+- [Contributing](#contributing)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Limitations](#limitations)
@@ -8,7 +9,16 @@
 - [Uninstallation](#uninstallation)
 
 # Introduction
+
 Dockerfile to build a nodejs+express image with [nodemon](http://nodemon.io/).
+
+# Contributing
+
+If you find this image useful here's how you can help:
+
+- Send a Pull Request with your awesome new features and bug fixes
+- Help new users with [Issues](https://github.com/sameersbn/docker-nodejs/issues) they may encounter
+- Send me a tip on [Gittip](https://gittip.com/sameersbn/) or using Bitcoin at **16rDxVqJPyYAFYPLduTaSiwe7ZiY1hHqKM**
 
 # Installation
 
