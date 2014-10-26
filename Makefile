@@ -3,7 +3,7 @@ all: build
 build:
 	@docker build --tag=${USER}/nodejs .
 
-install:
+install uninstall: build
 	@docker run -it --rm \
 		-v /usr/local/bin:/target \
-		${USER}/nodejs:latest install
+		${USER}/nodejs:latest $@
