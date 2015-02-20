@@ -1,4 +1,4 @@
-FROM sameersbn/ubuntu:14.04.20150120
+FROM sameersbn/ubuntu:14.04.20150220
 MAINTAINER sameer@damagehead.com
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv C7917B12 \
@@ -7,7 +7,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv C7917B12 \
  && apt-get install -y nodejs \
  && adduser --disabled-login --gecos 'NodeJS' nodejs \
  && npm install -g express-generator nodemon \
- && rm -rf /var/lib/apt/lists/* # 20140918
+ && rm -rf /var/lib/apt/lists/* # 20150220
 
 ADD scripts /scripts
 ADD start /start
