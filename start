@@ -27,7 +27,7 @@ case "$1" in
   node|nodejs|npm|express|nodemon)
     chown -R nodejs:nodejs /home/nodejs/src
     cd /home/nodejs/src
-    exec sudo -u nodejs -H $@
+    exec gosu nodejs $@
     ;;
   *)
     exec $@
