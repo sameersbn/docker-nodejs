@@ -10,7 +10,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv C7917B12 \
  && rm -rf /var/lib/apt/lists/*
 
 ADD scripts /scripts
-ADD start /start
-RUN chmod 755 /start
+ADD entrypoint.sh /sbin/entrypoint.sh
+RUN chmod 755 /sbin/entrypoint.sh
 
-ENTRYPOINT ["/start"]
+ENTRYPOINT ["/sbin/entrypoint.sh"]
