@@ -9,8 +9,8 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv C7917B12 \
  && npm install -g express-generator nodemon \
  && rm -rf /var/lib/apt/lists/*
 
-ADD scripts /scripts
-ADD entrypoint.sh /sbin/entrypoint.sh
+COPY scripts /scripts
+COPY entrypoint.sh /sbin/entrypoint.sh
 RUN chmod 755 /sbin/entrypoint.sh
 
 ENTRYPOINT ["/sbin/entrypoint.sh"]
