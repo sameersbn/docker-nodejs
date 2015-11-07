@@ -26,7 +26,7 @@ If you find this image useful here's how you can help:
 
 ```bash
 docker run -it --rm -v /usr/local/bin:/target \
-quay.io/sameersbn/nodejs:latest install
+sameersbn/nodejs:latest install
 ```
 
 This installs wrapper scripts to launch `node`, `nodejs`, `npm`, `express` and `nodemon` on the host.
@@ -53,13 +53,13 @@ The only known limitation is that you cannot install node modules globally, that
 
 # How it works
 
-The wrapper scripts mount the current working directory and host networking while starting the `quay.io/sameersbn/nodejs` image. The command executed while starting the image is the same as the name of the wrapper script that was launched with whatever arguments were passed while running the wrapper script.
+The wrapper scripts mount the current working directory and host networking while starting the `sameersbn/nodejs` image. The command executed while starting the image is the same as the name of the wrapper script that was launched with whatever arguments were passed while running the wrapper script.
 
 For example, if `npm start` is executed, the following command is executed by the wrapper script:
 
 ```bash
 docker run -it --rm --net=host \
-  -v $PWD:/home/nodejs/src quay.io/sameersbn/nodejs:latest npm start
+  -v $PWD:/home/nodejs/src sameersbn/nodejs:latest npm start
 ```
 
 # Upgrading
@@ -67,12 +67,12 @@ docker run -it --rm --net=host \
 To upgrade to newer releases, simply update the image
 
 ```
-docker pull quay.io/sameersbn/nodejs:latest
+docker pull sameersbn/nodejs:latest
 ```
 
 # Uninstallation
 
 ```bash
 docker run -it --rm -v /usr/local/bin:/target \
-quay.io/sameersbn/nodejs:latest uninstall
+sameersbn/nodejs:latest uninstall
 ```

@@ -1,9 +1,9 @@
 all: build
 
 build:
-	@docker build --tag=quay.io/sameersbn/nodejs .
+	@docker build --tag=sameersbn/nodejs .
 
 install uninstall: build
 	@docker run -it --rm \
 		-v /usr/local/bin:/target \
-		quay.io/sameersbn/nodejs:latest $@
+		sameersbn/nodejs:latest $@
