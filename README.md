@@ -1,5 +1,9 @@
 [![Docker Repository on Quay.io](https://quay.io/repository/sameersbn/nodejs/status "Docker Repository on Quay.io")](https://quay.io/repository/sameersbn/nodejs)
 
+> **NOTICE**:
+>
+> Active maintenance of the image has been halted. Your [contributions](#contributing) are welcome.
+
 # Table of Contents
 - [Introduction](#introduction)
 - [Contributing](#contributing)
